@@ -21,6 +21,7 @@
     }
   ],
   "action": {
-    "default_title": "BorealTip"
+    "default_title": "BorealTip",
+    "default_popup": "popup.html"
   }
 }

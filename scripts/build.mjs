@@ -44,8 +44,17 @@ for (const [name, cfg] of Object.entries(selected)) {
     outfile: path.join(cfg.outdir, "background.js")
   });
 
+  await build({
+    ...common,
+    entryPoints: ["src/popup.ts"],
+    outfile: path.join(cfg.outdir, "popup.js")
+  });
+
   const manifestSrc = await readFile(cfg.manifest, "utf8");
   await writeFile(path.join(cfg.outdir, "manifest.json"), manifestSrc);
+
+  await cp("src/popup.html", path.join(cfg.outdir, "popup.html"));
+  await cp("src/popup.css", path.join(cfg.outdir, "popup.css"));
 
   if (existsSync("assets")) {
     await cp("assets", path.join(cfg.outdir, "assets"), { recursive: true });

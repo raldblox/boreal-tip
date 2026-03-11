@@ -1,0 +1,136 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --card: #fffaf0;
+  --ink: #1e1a16;
+  --muted: #7f746c;
+  --accent: #d7c48a;
+  --accent-ink: #1a1409;
+  --border: rgba(30, 26, 22, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  background: radial-gradient(circle at top, #fdf8ef 0%, #f4f1ea 60%);
+  color: var(--ink);
+  width: 360px;
+}
+
+.header {
+  margin-bottom: 12px;
+}
+
+.brand {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(30, 26, 22, 0.08);
+  margin-bottom: 12px;
+}
+
+.metric {
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.section-title {
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.row-title {
+  font-size: 13px;
+  max-width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+}
+
+.row-title:hover {
+  text-decoration: underline;
+}
+
+.row-value {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.btn {
+  flex: 1;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
+
+.footer {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
